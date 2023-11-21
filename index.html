@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JW Player Embedded Videos</title>
+    <script src="https://cdn.jwplayer.com/libraries/WtUqC9Bh.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: space-between; /* Adjust spacing between videos */
+            width: 100%; /* Ensure the videos take the full width */
+            max-width: 1000px; /* Limit the total width of the videos */
+            margin-bottom: 20px;
+        }
+
+        .video-wrapper {
+            flex: 0 0 48%; /* Adjust width of individual videos */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">ADSTUDIO VIDEOS</h1>
+
+    <div class="video-container">
+        <div class="video-wrapper">
+            <div id="myPlayer1"></div>
+        </div>
+        <div class="video-wrapper">
+            <div id="myPlayer2"></div>
+        </div>
+    </div>
+    
+    <script>
+        const player1 = jwplayer("myPlayer1").setup({
+            file: "https://content.jwplatform.com/videos/DZhByYyE-bmYWYz9w.mp4",
+            image: "https://cdn.jwplayer.com/thumbs/DZhByYyE-1280.jpg",
+            width: "100%",
+            aspectratio: "16:9",
+            autostart: false,
+            controls: true,
+            displaytitle: true,
+            fullscreen: true,
+            mute: false,
+        });
+
+        const player2 = jwplayer("myPlayer2").setup({
+            file: "https://content.jwplatform.com/videos/ZQLpM15u-laAR7faG.mp4",
+            image: "https://cdn.jwplayer.com/thumbs/ZQLpM15u-320.jpg",
+            width: "100%",
+            aspectratio: "16:9",
+            autostart: false,
+            controls: true,
+            displaytitle: true,
+            fullscreen: true,
+            mute: false,
+        });
+    </script>
+</body>
+</html>
